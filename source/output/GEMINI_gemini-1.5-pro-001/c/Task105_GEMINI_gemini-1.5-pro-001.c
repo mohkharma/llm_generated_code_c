@@ -26,8 +26,8 @@ int main() {
         SSL_CTX_free(ctx);
         return 1;
     }
-
-    printf("Connected to %s\n", SSL_get_peer_certificate(ssl)->subject_name);
+//error: invalid use of incomplete typedef 'X509' {aka 'struct x509_st'}. print statment is commented
+    // printf("Connected to %s\n", SSL_get_peer_certificate(ssl)->subject_name);
     printf("SSL/TLS version: %s\n", SSL_get_version(ssl));
     printf("Cipher suite: %s\n", SSL_get_cipher(ssl));
 

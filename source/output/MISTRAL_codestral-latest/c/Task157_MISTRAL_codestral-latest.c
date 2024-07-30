@@ -1,5 +1,13 @@
-// C
-// Dynamically allocate memory
-int* myArray = (int*)malloc(10 * sizeof(int));
-// Deallocate memory
-free(myArray);
+#include <stdlib.h>
+
+int main() {
+    int* myArray;
+
+    // Dynamically allocate memory
+    myArray = malloc(10 * sizeof(int));
+
+    // Deallocate memory
+    free(myArray);
+
+    return 0;
+}

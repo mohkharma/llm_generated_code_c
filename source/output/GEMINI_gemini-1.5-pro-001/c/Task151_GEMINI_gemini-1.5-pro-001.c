@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -105,30 +106,22 @@ int main() {
 
     printf("Level Order Traversal: ");
     levelOrderTraversal(root);
-    printf("
-");
+    printf("\n");
 
-    printf("Search for 40: %d
-", search(root, 40));
-    printf("Search for 100: %d
-", search(root, 100));
+    printf("Search for 40: %d \n", search(root, 40));
+    printf("Search for 100: %d \n", search(root, 100));
 
-    printf("
-Delete 20
-");
+    printf("\nDelete 20\n");
     root = deleteNode(root, 20);
     printf("Level Order Traversal: ");
     levelOrderTraversal(root);
-    printf("
-");
+    printf("\n");
 
-    printf("Delete 50
-");
+    printf("Delete 50\n");
     root = deleteNode(root, 50);
     printf("Level Order Traversal: ");
     levelOrderTraversal(root);
-    printf("
-");
+    printf("\n");
 
     return 0;
 }

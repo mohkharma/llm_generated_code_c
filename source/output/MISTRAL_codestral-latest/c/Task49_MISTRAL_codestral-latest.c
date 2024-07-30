@@ -31,7 +31,9 @@ int answer_to_connection(void *cls, struct MHD_Connection *connection,
                 }
                 char *zErrMsg = 0;
                 char *sql = sqlite3_mprintf("INSERT INTO users(name, email) VALUES('%q', '%q');", json_string_value(name), json_string_value(email));
-                rc = sqlite3_exec(db, sql, nullptr, 0, &zErrMsg);
+                //error: ‘nullptr’ undeclared (first use in this function); did you mean ‘nullptr_t’?
+                // rc = sqlite3_exec(db, sql, nullptr, 0, &zErrMsg);
+                rc = sqlite3_exec(db, sql, NULL, 0, &zErrMsg);
                 sqlite3_free(sql);
                 if (rc != SQLITE_OK) {
                     return MHD_NO;

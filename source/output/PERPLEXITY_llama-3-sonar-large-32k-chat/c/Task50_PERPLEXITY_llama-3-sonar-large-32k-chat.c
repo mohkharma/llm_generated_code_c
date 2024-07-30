@@ -3,16 +3,23 @@
 #include <microhttpd.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <microhttpd.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 static int ahc_echo(void* cls, struct MHD_Connection* connection, const char* url, const char* method, const char* version, const char* upload_data, size_t* upload_data_size, void** con_cls) {
     if (strcmp(method, "POST") == 0) {
         FILE* file = fopen("uploaded_file", "wb");
         fwrite(upload_data, 1, *upload_data_size, file);
         fclose(file);
-        MHD_response* response = MHD_create_response_from_buffer(0, "File uploaded successfully!", MHD_RESPMEM_PERSISTENT);
+        // error: unknown type name ‘MHD_response’
+        // MHD_Response* response = MHD_create_response_from_buffer(0, "File uploaded successfully!", MHD_RESPMEM_PERSISTENT);
+        struct MHD_Response* response = MHD_create_response_from_buffer(0, "File uploaded successfully!", MHD_RESPMEM_PERSISTENT);
         return MHD_queue_response(connection, MHD_HTTP_OK, response);
     } else {
-        MHD_response* response = MHD_create_response_from_buffer(0, "Invalid request", MHD_RESPMEM_PERSISTENT);
+        // error: unknown type name ‘MHD_response’
+        // struct MHD_Response* response = MHD_create_response_from_buffer(0, "Invalid request", MHD_RESPMEM_PERSISTENT);
+        struct MHD_Response* response = MHD_create_response_from_buffer(0, "Invalid request", MHD_RESPMEM_PERSISTENT);
         return MHD_queue_response(connection, MHD_HTTP_BAD_REQUEST, response);
     }
 }

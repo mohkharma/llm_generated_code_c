@@ -52,8 +52,16 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+   //error: ‘xmlNodeSet’ {aka ‘struct _xmlNodeSet’} has no member named ‘nodesetvalsize’
+    //This is due to a change in the libxml2 API. fixed by regeneration
+  // if (result->nodesetval) {
+  //   for (int i = 0; i < result->nodesetval->nodesetvalsize; ++i) {
+  //     print_node_info(result->nodesetval->nodeTab[i]);
+  //   }
+  // }
     if (result->nodesetval) {
-        for (int i = 0; i < result->nodesetval->nodesetvalsize; ++i) {
+        int node_count = xmlXPathNodeSetGetLength(result->nodesetval);
+        for (int i = 0; i < node_count; ++i) {
             print_node_info(result->nodesetval->nodeTab[i]);
         }
     }

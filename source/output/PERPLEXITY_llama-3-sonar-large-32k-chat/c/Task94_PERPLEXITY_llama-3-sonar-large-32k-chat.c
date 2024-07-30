@@ -1,4 +1,4 @@
-code here:
+
 // Note: This code assumes that the key and value are separated by a single '=' character
 // and that the key is unique. It also assumes that the input file is not too large to fit
 // in memory. This code is not as robust as the Java or C++ versions.

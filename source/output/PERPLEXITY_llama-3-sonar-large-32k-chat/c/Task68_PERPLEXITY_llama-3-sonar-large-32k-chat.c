@@ -25,7 +25,10 @@ int main(int argc, char** argv) {
     char query[256];
     sprintf(query, "(uid=%s)", username);
     LDAPMessage* result;
-    rc = ldap_search_ext_s(conn, baseDN, LDAP_SCOPE_SUBTREE, query, NULL, NULL, NULL, &result);
+    // add NULL, NULL, NULL, before &result, error: too few arguments to function ‘ldap_search_ext_s’
+    // rc = ldap_search_ext_s(conn, baseDN, LDAP_SCOPE_SUBTREE, query, NULL, NULL, NULL,  &result);
+    rc = ldap_search_ext_s(conn, baseDN, LDAP_SCOPE_SUBTREE, query, NULL, NULL, NULL, NULL, NULL, NULL, &result);
+
     if (rc != LDAP_SUCCESS) {
         printf("Error: %s\n", ldap_err2string(rc));
         return 1;

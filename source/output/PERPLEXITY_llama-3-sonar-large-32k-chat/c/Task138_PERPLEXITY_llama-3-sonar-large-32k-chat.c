@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -16,7 +17,9 @@ typedef struct {
 void addUser(PermissionManager *manager, char *username, char *password, char *privileges[]) {
     strcpy(manager->users[manager->user_count].username, username);
     strcpy(manager->users[manager->user_count].password, password);
-    for (int i = 0; privileges[i] != NULL; i++) {
+    //error: ‘i’ undeclared (first use in this function)
+    int i ;
+    for (i = 0; privileges[i] != NULL; i++) {
         strcpy(manager->users[manager->user_count].privileges[i], privileges[i]);
     }
     manager->users[manager->user_count].privilege_count = i;

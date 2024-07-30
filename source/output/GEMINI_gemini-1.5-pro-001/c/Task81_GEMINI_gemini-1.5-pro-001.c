@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <openssl/evp.h>
 #include <openssl/md5.h>
 #include <openssl/sha.h>
+#include <openssl/types.h>
 
 // Function to calculate the hash of a file
 char* calculate_file_hash(const char* filename, const char* algorithm) {

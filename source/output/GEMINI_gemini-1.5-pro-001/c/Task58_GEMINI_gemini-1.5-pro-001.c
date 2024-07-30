@@ -1,5 +1,6 @@
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 bool XO(const char* text) {
   int x_count = 0;

@@ -4,7 +4,7 @@
 #include <curl/curl.h>
 // You need to include a JSON parsing library for C
 // Example using the "cJSON" library:
-#include "cJSON.h" 
+#include "cjson/cJSON.h"
 
 // Callback function for cURL to write data to a string
 size_t writeCallback(void* contents, size_t size, size_t nmemb, void* userp) {

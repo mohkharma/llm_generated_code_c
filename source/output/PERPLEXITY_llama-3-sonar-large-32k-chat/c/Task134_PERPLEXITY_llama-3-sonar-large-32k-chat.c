@@ -24,7 +24,9 @@ void key_manager_generate_key(KeyManager* manager, const char* keyName) {
     RSA* key = RSA_new();
     BIGNUM* exponent = BN_new();
     BN_set_word(exponent, 65537);
-    RSA_generate_key_ex(key, 2048, exponent, nullptr);
+    //error: ‘nullptr’ undeclared (first use in this function); did you mean ‘nullptr_t’?
+    // RSA_generate_key_ex(key, 2048, exponent, nullptr);
+    RSA_generate_key_ex(key, 2048, exponent, NULL);
     manager->keys[manager->size].key = key;
     manager->size++;
 }
@@ -36,7 +38,8 @@ RSA* key_manager_get_key(KeyManager* manager, const char* keyName) {
             return manager->keys[i].key;
         }
     }
-    return nullptr;
+    //error: ‘nullptr’ undeclared (first use in this function); did you mean ‘nullptr_t’?
+    return NULL;
 }
 
 void key_manager_delete_key(KeyManager* manager, const char* keyName) {
@@ -52,7 +55,8 @@ void key_manager_delete_key(KeyManager* manager, const char* keyName) {
 
 char* key_manager_hash_key(KeyManager* manager, const char* keyName) {
     RSA* key = key_manager_get_key(manager, keyName);
-    if (key != nullptr) {
+    //error: ‘nullptr’ undeclared (first use in this function); did you mean ‘nullptr_t’?
+    if (key != NULL) {
         unsigned char buffer[256];
         unsigned int length = i2s_PublicKey(key, buffer);
         char keyString[length + 1];
@@ -66,7 +70,7 @@ char* key_manager_hash_key(KeyManager* manager, const char* keyName) {
         }
         return strdup(hashString);
     } else {
-        return nullptr;
+        return NULL;
     }
 }
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <fcgi_stdio.h>
+#include <fastcgi/fcgi_stdio.h>
 
 #define CSRF_TOKEN "aCSRFtoken"
 

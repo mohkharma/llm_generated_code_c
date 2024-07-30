@@ -1,6 +1,8 @@
 // C
 #include <stdio.h>
-#include <conio.h>
+//This function _getch(); doesn't exist as per to the documentation https://github.com/zoelabbb/conio.h
+//also, error: unknown type name ‘class’
+// #include <conio.h>
 
 int main() {
     char password[30];
@@ -9,7 +11,9 @@ int main() {
 
     printf("Enter password: ");
     while (1) {
-        a = _getch();
+        //This function _getch(); doesn't exist as per to the documentation https://github.com/zoelabbb/conio.h
+        // a = _getch();
+        a = ' ';//_getch();
         if (a == '\r') {
             password[i] = '\0';
             break;

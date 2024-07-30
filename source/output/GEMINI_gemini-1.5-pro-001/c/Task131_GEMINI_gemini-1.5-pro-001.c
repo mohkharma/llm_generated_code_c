@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <cJSON.h>
+#include <cjson/cJSON.h>
 
 int main() {
   char data[1024];

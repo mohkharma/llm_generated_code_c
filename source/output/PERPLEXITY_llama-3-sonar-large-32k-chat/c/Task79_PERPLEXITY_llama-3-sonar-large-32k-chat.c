@@ -1,4 +1,4 @@
-code here:
+
 // Note: C does not have a built-in map or string class, so we'll use arrays and manual indexing
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
 // C code for client
+#include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/socket.h>

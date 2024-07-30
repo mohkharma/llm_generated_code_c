@@ -4,9 +4,12 @@ You would need to use a third-party library like OpenSSL to establish SSL/TLS co
 Here is an example of how to do it with OpenSSL:
 */
 
+#include <netdb.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <openssl/ssl.h>
 #include <openssl/err.h>
+#include <sys/socket.h>
 
 int main() {
     // Define the remote server and port

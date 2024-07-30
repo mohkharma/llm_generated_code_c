@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <pthread.h>
-//compilation error, dependancies
 
 #define PORT 12345
 #define BUFFER_SIZE 1024

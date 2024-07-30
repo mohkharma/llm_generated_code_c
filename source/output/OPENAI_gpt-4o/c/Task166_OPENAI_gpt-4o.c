@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void posNegSort(int* lst, int size, int* result) {
     int* pos_nums = (int*)malloc(size * sizeof(int));

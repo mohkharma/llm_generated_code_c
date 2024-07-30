@@ -1,6 +1,8 @@
-code here:
+
 // Note: C does not have built-in support for threads or locks. This implementation uses POSIX threads and mutexes.
 #include <pthread.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 typedef struct {
     double balance;

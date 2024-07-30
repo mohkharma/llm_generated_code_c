@@ -1,3 +1,18 @@
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+
+//error: conflicting types for ‘isPalindrome’; have ‘_Bool(char *, int,  int)’
+bool isPalindrome(char *s, int left, int right) {
+    while (left < right) {
+        if (s[left] != s[right]) {
+            return false;
+        }
+        ++left;
+        --right;
+    }
+    return true;
+}
 char * shortestPalindrome(char * s){
     int n = strlen(s);
     long long base = 26, mod = 1e9 + 7;
@@ -19,15 +34,4 @@ char * shortestPalindrome(char * s){
     }
     res[idx] = '\0';
     return res;
-}
-
-bool isPalindrome(char *s, int left, int right) {
-    while (left < right) {
-        if (s[left] != s[right]) {
-            return false;
-        }
-        ++left;
-        --right;
-    }
-    return true;
 }

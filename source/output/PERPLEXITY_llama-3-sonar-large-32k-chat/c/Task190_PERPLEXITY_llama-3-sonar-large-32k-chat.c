@@ -12,9 +12,29 @@ int main() {
     char lines[MAX_LINES][MAX_COLS][MAX_FIELD_LENGTH];
     int lineCount = 0;
     char line[MAX_FIELD_LENGTH];
+    // error: ‘colCount’ undeclared (first use in this function)
+    // change variable scope
+    // while (fgets(line, MAX_FIELD_LENGTH, file) != NULL) {
+    //     char *token = strtok(line, " ");
+    //     int colCount = 0;
+    //     while (token != NULL) {
+    //         strcpy(lines[lineCount][colCount], token);
+    //         token = strtok(NULL, " ");
+    //         colCount++;
+    //     }
+    //     lineCount++;
+    // }
+    // fclose(file);
+    // for (int col = 0; col < colCount; col++) {
+    //     for (int line = 0; line < lineCount; line++) {
+    //         printf("%s ", lines[line][col]);
+    //     }
+    //     printf("\n");
+    // }
+    int colCount = 0;
     while (fgets(line, MAX_FIELD_LENGTH, file) != NULL) {
         char *token = strtok(line, " ");
-        int colCount = 0;
+
         while (token != NULL) {
             strcpy(lines[lineCount][colCount], token);
             token = strtok(NULL, " ");

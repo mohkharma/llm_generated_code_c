@@ -50,13 +50,19 @@ void generateKeyPair(int p, int q, int* publicKey, int* privateKey) {
 
 void encrypt(int publicKey, int n, char* plaintext, int* ciphertext) {
     for (int i = 0; plaintext[i] != '\0'; i++) {
-        ciphertext[i] = pow(plaintext[i], publicKey) % n;
+        //error: invalid operands to binary % (have ‘double’ and ‘int’)
+         // ciphertext[i] = pow(plaintext[i], publicKey) % n;
+        ciphertext[i] = (int)pow(plaintext[i], publicKey) % n;
     }
 }
 
 void decrypt(int privateKey, int n, int* ciphertext, char* plaintext) {
-    for (int i = 0; ciphertext[i] != 0; i++) {
-        plaintext[i] = pow(ciphertext[i], privateKey) % n;
+    // error: ‘i’ undeclared (first use in this function)
+    int i ;
+    for ( i = 0; ciphertext[i] != 0; i++) {
+        //error: invalid operands to binary % (have ‘double’ and ‘int’)
+        // plaintext[i] = pow(ciphertext[i], privateKey) % n;
+        plaintext[i] = (int)pow(ciphertext[i], privateKey) % n;
     }
     plaintext[i] = '\0';
 }

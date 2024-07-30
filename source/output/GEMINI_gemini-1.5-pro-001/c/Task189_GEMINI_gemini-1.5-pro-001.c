@@ -1,3 +1,5 @@
+#include <semaphore.h>
+// rror: unknown type name ‘sem_t’
 typedef struct {
     int n;
     int count;

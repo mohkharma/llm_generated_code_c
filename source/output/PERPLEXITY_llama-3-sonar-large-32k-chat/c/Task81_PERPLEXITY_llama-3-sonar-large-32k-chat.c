@@ -2,6 +2,7 @@
 #include <openssl/err.h>
 #include <openssl/x509.h>
 #include <string.h>
+#include <sys/socket.h>
 
 int main() {
     SSL_CTX *ctx;

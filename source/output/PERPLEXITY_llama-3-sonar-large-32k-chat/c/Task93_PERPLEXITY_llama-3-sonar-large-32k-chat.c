@@ -1,4 +1,4 @@
-code here:
+
 // Note: This code assumes that the key and value are separated by a single '=' character
 // and that there are no '=' characters in the key or value.
 #include <stdio.h>

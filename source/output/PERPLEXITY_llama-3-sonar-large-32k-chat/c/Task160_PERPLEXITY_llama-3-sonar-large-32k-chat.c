@@ -31,8 +31,10 @@ int main() {
         if(res != CURLE_OK) {
             fprintf(stderr, "cURL error: %s\n", curl_easy_strerror(res));
         } else {
-            printf("Status Code %ld\n", curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE));
-            printf("Headers: %s\n", curl_easy_getinfo(curl, CURLINFO_EFFECTIVE_URL));
+            //error: macro "curl_easy_getinfo" requires 3 arguments, but only 2 given
+            printf("Status Code %ld\n", curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE,NULL));
+            //error: macro "curl_easy_getinfo" requires 3 arguments, but only 2 given
+            printf("Headers: %s\n", curl_easy_getinfo(curl, CURLINFO_EFFECTIVE_URL,NULL));
             printf("Content: %s\n", readBuffer);
         }
 

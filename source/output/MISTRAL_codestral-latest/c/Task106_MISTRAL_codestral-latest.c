@@ -17,7 +17,8 @@ int main() {
     RSA* rsa = RSA_new();
     BIGNUM* e = BN_new();
     BN_set_word(e, RSA_F4);
-    RSA_generate_key_ex(rsa, 2048, e, nullptr);
+    // RSA_generate_key_ex(rsa, 2048, e, nullptr);
+    RSA_generate_key_ex(rsa, 2048, e, NULL);
 
     // Export the public key
     BIO* bio = BIO_new(BIO_s_mem());

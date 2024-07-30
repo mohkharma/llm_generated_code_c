@@ -8,7 +8,9 @@
 
 int main() {
     xmlInitParser();
-    xmlDoc *doc = xmlReadMemory("<root><person><name>John</name><age>30</age></person></root>", 44, NULL);
+    //fix number of arguments, error: too few arguments to function ‘xmlReadMemory’
+    // xmlDoc *doc = xmlReadMemory("<root><person><name>John</name><age>30</age></person></root>", 44, NULL);
+    xmlDoc *doc = xmlReadMemory("<root><person><name>John</name><age>30</age></person></root>", 44, NULL, NULL, NULL);
     if (doc == NULL) {
         fprintf(stderr, "Failed to parse XML\n");
         return 1;

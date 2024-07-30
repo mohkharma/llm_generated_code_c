@@ -3,11 +3,6 @@
 #include <pthread.h>
 #include <dirent.h>
 #include <string.h>
-#include <sys/stat.h>
-#include <unistd.h>
-//compilation error,  error: 'struct dirent' has no member named 'd_type', comment the line
-//we fixed as: Commented out d_type Check: Instead of checking entry->d_type == DT_REG, we use stat to get the file
-//status and check if it is a regular file using S_ISREG.
 
 pthread_mutex_t lock;
 
@@ -27,7 +22,6 @@ void* process_file(void* file_path) {
     return NULL;
 }
 
-
 void process_directory(const char* directory_path) {
     DIR* dir = opendir(directory_path);
     if (!dir) {
@@ -41,10 +35,7 @@ void process_directory(const char* directory_path) {
     while ((entry = readdir(dir)) != NULL) {
         char file_path[1024];
         snprintf(file_path, sizeof(file_path), "%s/%s", directory_path, entry->d_name);
-
-        struct stat path_stat;
-        stat(file_path, &path_stat);
-        if (S_ISREG(path_stat.st_mode)) {
+        if (entry->d_type == DT_REG) {
             pthread_create(&threads[thread_count++], NULL, process_file, strdup(file_path));
         }
     }
@@ -53,6 +44,7 @@ void process_directory(const char* directory_path) {
     }
     closedir(dir);
 }
+
 int main() {
     char directory[] = "path_to_directory";
     if (pthread_mutex_init(&lock, NULL) != 0) {

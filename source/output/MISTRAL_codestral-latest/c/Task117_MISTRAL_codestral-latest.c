@@ -2,11 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "miniz.h"
+#include "miniz/miniz.h"
 
 void extractZip(const char* zipFilePath, const char* destDir) {
     mz_zip_archive zipArchive = {0};
-    if (!mz_zip_reader_init_file(&zipArchive, zipFilePath)) {
+    //error: too few arguments to function ‘mz_zip_reader_init_file’. fixed from https://github.com/tessel/miniz/blob/master/example2.c
+    // if (!mz_zip_reader_init_file(&zipArchive, zipFilePath)) {
+    if (!mz_zip_reader_init_file(&zipArchive, zipFilePath,0)) {
         printf("Error opening archive\n");
         return;
     }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cJSON.h" // Assuming you have the cJSON library
+#include "cjson/cJSON.h" // Assuming you have the cJSON library
 
 // Function to get the root element of a JSON string
 cJSON* getRootElement(const char* jsonString) {

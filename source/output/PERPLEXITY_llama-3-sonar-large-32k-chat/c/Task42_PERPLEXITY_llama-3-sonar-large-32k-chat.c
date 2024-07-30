@@ -1,7 +1,8 @@
-code here:
+
 // Note: C does not have a built-in string class, so we'll use char arrays instead.
 // Also, C does not have a built-in vector class, so we'll use a fixed-size array instead.
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
 
