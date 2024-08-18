@@ -827,9 +827,20 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #        source/output/GEMINI_gemini-1.5-pro-001/c/Task199_GEMINI_gemini-1.5-pro-001.c
 #)
 
-add_executable(llm_generated_code_c main.c
-        source/output/PERPLEXITY_llama-3-sonar-large-32k-chat/c/Task43_PERPLEXITY_llama-3-sonar-large-32k-chat.c
+add_executable(llm_generated_code_c
+        tests/claude/Task1_Test.c
+        tests/codestral/Task1_Test.c
+
 )
+#add_executable(Task43_PERPLEXITY
+#        source/output/PERPLEXITY_llama-3-sonar-large-32k-chat/c/Task43_PERPLEXITY_llama-3-sonar-large-32k-chat.c
+#)
+#add_executable(Task0_PERPLEXITY
+#        source/output/PERPLEXITY_llama-3-sonar-large-32k-chat/c/Task0_PERPLEXITY_llama-3-sonar-large-32k-chat.c
+#)
+#add_executable(Task3_PERPLEXITY
+#        source/output/PERPLEXITY_llama-3-sonar-large-32k-chat/c/Task3_PERPLEXITY_llama-3-sonar-large-32k-chat.c
+#)
 #add_executable(llm_generated_code_c main.c
 #        source/output/OPENAI_gpt-4o/c/Task0_OPENAI_gpt-4o.c
 #        source/output/OPENAI_gpt-4o/c/Task1_OPENAI_gpt-4o.c
