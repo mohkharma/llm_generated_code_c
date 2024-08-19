@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <assert.h>
-#include "../../source/output/codestral/c/Task1_MISTRAL_codestral-latest.c"  // Include the header for the function
+// #include "../../source/output/gemini/c/Task1_GEMINI_gemini-1.5-pro-001.c"  // Include the header for the function
+// #include "../../source/output/gemini/c/Task1_MISTRAL_codestral-latest.c"  // Include the header for the function
+// #include "../../source/output/claude/c/Task1_CLAUDE_claude-3-5-sonnet-20240620"  // Include the header for the function
+#include "../../source/output/gpt4o/c/Task1_OPENAI_gpt-4o.c"  // Include the header for the function
+// #include "../../source/output/llama-3/c/Task1_PERPLEXITY_llama-3-sonar-large-32k-chat.c  // Include the header for the function
 
 // Helper function to run a test case
 void run_test_case(int stops[][2], int num_stops, int expected) {
-    int result = countPassengers(stops, num_stops);
+    int result = numberOfPeopleOnBus(stops, num_stops);
     assert(result == expected);
     printf("Test passed with result: %d\n", result);
 }
