@@ -16,10 +16,10 @@ int persistence(long long num) {
     }
     return count;
 }
-
-int main() {
-    printf("%d\n", persistence(39));
-    printf("%d\n", persistence(999));
-    printf("%d\n", persistence(4));
-    return 0;
-}
+//
+// int main() {
+//     printf("%d\n", persistence(39));
+//     printf("%d\n", persistence(999));
+//     printf("%d\n", persistence(4));
+//     return 0;
+// }

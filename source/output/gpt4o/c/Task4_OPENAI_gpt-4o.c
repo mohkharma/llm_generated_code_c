@@ -14,9 +14,9 @@ bool isIsogram(const char *s) {
     return true;
 }
 
-int main() {
-    printf("%d\n", isIsogram("Dermatoglyphics"));  // True
-    printf("%d\n", isIsogram("aba"));              // False
-    printf("%d\n", isIsogram("moOse"));            // False
-    return 0;
-}
+// int main() {
+//     printf("%d\n", isIsogram("Dermatoglyphics"));  // True
+//     printf("%d\n", isIsogram("aba"));              // False
+//     printf("%d\n", isIsogram("moOse"));            // False
+//     return 0;
+// }

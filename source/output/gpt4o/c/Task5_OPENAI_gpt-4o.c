@@ -18,10 +18,10 @@ int persistence(int num) {
     return count;
 }
 
-int main() {
-    printf("%d\n", persistence(39));  // 3
-    printf("%d\n", persistence(999)); // 4
-    printf("%d\n", persistence(4));   // 0
-
-    return 0;
-}
+// int main() {
+//     printf("%d\n", persistence(39));  // 3
+//     printf("%d\n", persistence(999)); // 4
+//     printf("%d\n", persistence(4));   // 0
+//
+//     return 0;
+// }

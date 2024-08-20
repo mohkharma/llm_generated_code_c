@@ -16,9 +16,9 @@ bool isPangram(const char* s) {
     }
     return true;
 }
-
-int main() {
-    char s[] = "The quick brown fox jumps over the lazy dog";
-    printf("%s\n", isPangram(s) ? "true" : "false");  // Output: true
-    return 0;
-}
+//
+// int main() {
+//     char s[] = "The quick brown fox jumps over the lazy dog";
+//     printf("%s\n", isPangram(s) ? "true" : "false");  // Output: true
+//     return 0;
+// }

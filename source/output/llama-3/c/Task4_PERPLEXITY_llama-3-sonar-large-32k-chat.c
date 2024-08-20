@@ -12,9 +12,9 @@ bool isIsogram(const char* str) {
     return true;
 }
 
-int main() {
-    printf("%d\n", isIsogram("Dermatoglyphics"));  // 1
-    printf("%d\n", isIsogram("aba"));  // 0
-    printf("%d\n", isIsogram("moOse"));  // 0
-    return 0;
-}
+// int main() {
+//     printf("%d\n", isIsogram("Dermatoglyphics"));  // 1
+//     printf("%d\n", isIsogram("aba"));  // 0
+//     printf("%d\n", isIsogram("moOse"));  // 0
+//     return 0;
+// }

@@ -19,8 +19,8 @@ int isPangram(const char* s) {
     return 1;
 }
 
-int main() {
-    printf("%d\n", isPangram("The quick brown fox jumps over the lazy dog"));  // 1
-    printf("%d\n", isPangram("Hello World"));  // 0
-    return 0;
-}
+// int main() {
+//     printf("%d\n", isPangram("The quick brown fox jumps over the lazy dog"));  // 1
+//     printf("%d\n", isPangram("Hello World"));  // 0
+//     return 0;
+// }

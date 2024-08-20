@@ -8,10 +8,10 @@ void createPhoneNumber(int arr[10], char* buffer) {
              arr[9]);
 }
 
-int main() {
-    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-    char buffer[15];
-    createPhoneNumber(arr, buffer);
-    printf("%s\n", buffer);
-    return 0;
-}
+// int main() {
+//     int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+//     char buffer[15];
+//     createPhoneNumber(arr, buffer);
+//     printf("%s\n", buffer);
+//     return 0;
+// }
