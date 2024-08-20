@@ -14,8 +14,8 @@ int getSum(int a, int b) {
     return sum;
 }
 
-int main() {
-    int result = getSum(1, 0); // Example usage
-    printf("%d\n", result);
-    return 0;
-}
+// int main() {
+//     int result = getSum(1, 0); // Example usage
+//     printf("%d\n", result);
+//     return 0;
+// }
