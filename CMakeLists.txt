@@ -828,7 +828,8 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #)
 
 add_executable(llm_generated_code_c
-        tests/claude/Task5_Test.c
+
+        tests/llama-3/Task9_Test.c
 )
 #add_executable(Task43_PERPLEXITY
 #        source/output/PERPLEXITY_llama-3-sonar-large-32k-chat/c/Task43_PERPLEXITY_llama-3-sonar-large-32k-chat.c

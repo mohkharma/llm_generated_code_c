@@ -12,10 +12,10 @@ double findUniq(double arr[], int size) {
     return a;
 }
 
-int main() {
-    double arr1[] = { 1, 1, 1, 2, 1, 1 };
-    double arr2[] = { 0, 0, 0.55, 0, 0 };
-    printf("%f\n", findUniq(arr1, 6)); // => 2
-    printf("%f\n", findUniq(arr2, 5)); // => 0.55
-    return 0;
-}
+// int main() {
+//     double arr1[] = { 1, 1, 1, 2, 1, 1 };
+//     double arr2[] = { 0, 0, 0.55, 0, 0 };
+//     printf("%f\n", findUniq(arr1, 6)); // => 2
+//     printf("%f\n", findUniq(arr2, 5)); // => 0.55
+//     return 0;
+// }

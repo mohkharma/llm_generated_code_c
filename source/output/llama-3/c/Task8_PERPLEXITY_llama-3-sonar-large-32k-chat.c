@@ -9,9 +9,9 @@ char findMissingLetter(char array[], int size) {
     return ' ';
 }
 
-int main() {
-    char array[] = {'a','b','c','d','f'};
-    int size = sizeof(array) / sizeof(array[0]);
-    printf("%c\n", findMissingLetter(array, size));
-    return 0;
-}
+// int main() {
+//     char array[] = {'a','b','c','d','f'};
+//     int size = sizeof(array) / sizeof(array[0]);
+//     printf("%c\n", findMissingLetter(array, size));
+//     return 0;
+// }
