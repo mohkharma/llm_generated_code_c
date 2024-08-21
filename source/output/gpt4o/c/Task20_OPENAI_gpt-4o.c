@@ -18,11 +18,11 @@ int dig_pow(int n, int p) {
 
     return sum % n == 0 ? sum / n : -1;
 }
-
+/*
 int main() {
     printf("%d\n", dig_pow(89, 1));     // Output: 1
     printf("%d\n", dig_pow(92, 1));     // Output: -1
     printf("%d\n", dig_pow(695, 2));    // Output: 2
     printf("%d\n", dig_pow(46288, 3));  // Output: 51
     return 0;
-}
+}*/

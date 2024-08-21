@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.17)
 project(llm_generated_code_c C)
 
 set(CMAKE_C_STANDARD 11)
@@ -17,7 +17,9 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #
 #find_package(httplib CONFIG REQUIRED)
 #find_package(bson-1.0 CONFIG REQUIRED)
-
+add_executable(llm_generated_code_c
+        tests/llama-3/Task21_Test.c
+        )
 #add_executable(llm_generated_code_c main.c
 #        source/output/OPENAI_gpt-4o/c/Task0_OPENAI_gpt-4o.c
 #        source/output/OPENAI_gpt-4o/c/Task1_OPENAI_gpt-4o.c
@@ -827,9 +829,7 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #        source/output/GEMINI_gemini-1.5-pro-001/c/Task199_GEMINI_gemini-1.5-pro-001.c
 #)
 
-add_executable(llm_generated_code_c
-        tests/codestral/Task10_Test.c
-)
+
 #add_executable(Task43_PERPLEXITY
 #        source/output/PERPLEXITY_llama-3-sonar-large-32k-chat/c/Task43_PERPLEXITY_llama-3-sonar-large-32k-chat.c
 #)
