@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 void reverse(char* str) {
@@ -29,12 +30,12 @@ char* reverseWords(char* s) {
     return result;
 }
 
-int main() {
-    char s1[] = "Hey fellow warriors";
-    char s2[] = "This is a test";
-    char s3[] = "This is another test";
-    printf("%s\n", reverseWords(s1));
-    printf("%s\n", reverseWords(s2));
-    printf("%s\n", reverseWords(s3));
-    return 0;
-}
+// int main() {
+//     char s1[] = "Hey fellow warriors";
+//     char s2[] = "This is a test";
+//     char s3[] = "This is another test";
+//     printf("%s\n", reverseWords(s1));
+//     printf("%s\n", reverseWords(s2));
+//     printf("%s\n", reverseWords(s3));
+//     return 0;
+// }

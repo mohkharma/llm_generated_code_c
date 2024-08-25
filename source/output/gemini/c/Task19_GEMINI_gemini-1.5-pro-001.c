@@ -7,6 +7,9 @@ void reverse_string(char *str, int len) {
     str[i] = str[len - i - 1];
     str[len - i - 1] = temp;
   }
+  printf("\n");
+  printf(str);
+  printf("\n");
 }
 
 void spin_words(char *sentence) {
@@ -15,7 +18,8 @@ void spin_words(char *sentence) {
     if (strlen(word) >= 5) {
       reverse_string(word, strlen(word));
     }
-    printf("%s ", word);
+
     word = strtok(NULL, " ");
+    // printf("%s ", word);
   }
 }

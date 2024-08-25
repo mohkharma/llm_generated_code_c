@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
-void toJadenCase(char* phrase) {
+char *toJadenCase(char *phrase) {
     if (phrase == NULL || strlen(phrase) == 0) {
         return;
     }
@@ -20,9 +20,9 @@ void toJadenCase(char* phrase) {
     }
 }
 
-int main() {
-    char phrase[] = "How can mirrors be real if our eyes aren't real";
-    toJadenCase(phrase);
-    printf("%s\n", phrase);
-    return 0;
-}
+// int main() {
+//     char phrase[] = "How can mirrors be real if our eyes aren't real";
+//     toJadenCase(phrase);
+//     printf("%s\n", phrase);
+//     return 0;
+// }

@@ -10,8 +10,8 @@ int solution(char* str1, char* str2) {
     }
     return 1;
 }
-int main() {
-    printf("%d\n", solution("abc", "bc")); // returns 1
-    printf("%d\n", solution("abc", "d")); // returns 0
-    return 0;
-}
+// int main() {
+//     printf("%d\n", solution("abc", "bc")); // returns 1
+//     printf("%d\n", solution("abc", "d")); // returns 0
+//     return 0;
+// }

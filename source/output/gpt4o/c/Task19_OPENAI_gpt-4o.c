@@ -24,16 +24,16 @@ void spinWords(char *sentence) {
         }
     }
 }
-
-void printExamples() {
-    char examples[][100] = {"Hey fellow warriors", "This is a test", "This is another test"};
-    for (int i = 0; i < 3; i++) {
-        spinWords(examples[i]);
-        printf("%s\n", examples[i]);
-    }
-}
-
-int main() {
-    printExamples();
-    return 0;
-}
+//
+// void printExamples() {
+//     char examples[][100] = {"Hey fellow warriors", "This is a test", "This is another test"};
+//     for (int i = 0; i < 3; i++) {
+//         spinWords(examples[i]);
+//         printf("%s\n", examples[i]);
+//     }
+// }
+//
+// int main() {
+//     printExamples();
+//     return 0;
+// }

@@ -14,14 +14,14 @@ char** buildTower(int nFloors) {
     }
     return tower;
 }
-
-int main() {
-    int nFloors = 6;
-    char** tower = buildTower(nFloors);
-    for (int i = 0; i < nFloors; i++) {
-        printf("%s\n", tower[i]);
-        free(tower[i]);
-    }
-    free(tower);
-    return 0;
-}
+//
+// int main() {
+//     int nFloors = 6;
+//     char** tower = buildTower(nFloors);
+//     for (int i = 0; i < nFloors; i++) {
+//         printf("%s\n", tower[i]);
+//         free(tower[i]);
+//     }
+//     free(tower);
+//     return 0;
+// }

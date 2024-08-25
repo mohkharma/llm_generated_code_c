@@ -12,9 +12,9 @@ bool solution(const char *str, const char *ending) {
         return false;
     }
 }
-
-int main() {
-    printf("%d\n", solution("abc", "bc"));  // returns true
-    printf("%d\n", solution("abc", "d"));   // returns false
-    return 0;
-}
+//
+// int main() {
+//     printf("%d\n", solution("abc", "bc"));  // returns true
+//     printf("%d\n", solution("abc", "d"));   // returns false
+//     return 0;
+// }
