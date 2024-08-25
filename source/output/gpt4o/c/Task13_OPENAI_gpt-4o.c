@@ -15,9 +15,9 @@ bool isValidWalk(char walk[], int length) {
     return x == 0 && y == 0;
 }
 
-int main() {
-    char walk[] = {'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'};
-    int length = sizeof(walk) / sizeof(walk[0]);
-    printf("%s\n", isValidWalk(walk, length) ? "true" : "false"); // Output: true
-    return 0;
-}
+// int main() {
+//     char walk[] = {'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'};
+//     int length = sizeof(walk) / sizeof(walk[0]);
+//     printf("%s\n", isValidWalk(walk, length) ? "true" : "false"); // Output: true
+//     return 0;
+// }

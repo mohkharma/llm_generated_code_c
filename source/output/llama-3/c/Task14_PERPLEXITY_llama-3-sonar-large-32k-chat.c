@@ -16,10 +16,10 @@ int findEvenIndex(int arr[], int size) {
     }
     return -1;
 }
-
-int main() {
-    int arr[] = {1,2,3,4,3,2,1};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    printf("%d\n", findEvenIndex(arr, size));
-    return 0;
-}
+//
+// int main() {
+//     int arr[] = {1,2,3,4,3,2,1};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     printf("%d\n", findEvenIndex(arr, size));
+//     return 0;
+// }

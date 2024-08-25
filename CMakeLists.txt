@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(llm_generated_code_c C)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 17)
 include_directories(/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include/)
 include_directories(/usr/include/)
 

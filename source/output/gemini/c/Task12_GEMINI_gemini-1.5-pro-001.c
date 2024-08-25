@@ -21,3 +21,12 @@ char * highestScoringWord(char *str) {
   }
   return highest_word;
 }
+
+//
+// int main() {
+//   printf("%s\n", highestScoringWord("man i need a taxi up to ubud")); // Output: taxi
+//   // printf("%s\n", highestScoringWord("what time are we climbing up the volcano")); // Output: volcano
+//   // printf("%s\n", highestScoringWord("take me to semynak")); // Output: semynak
+//   // assert(strcmp(high(""), "") == 0);
+//   return 0;
+// }

@@ -9,7 +9,7 @@ int nb_year(int p0, double percent, int aug, int p) {
     return year;
 }
 
-int main() {
-    printf("%d\n", nb_year(1000, 2, 50, 1200));  // Example usage
-    return 0;
-}
+// int main() {
+//     printf("%d\n", nb_year(1000, 2, 50, 1200));  // Example usage
+//     return 0;
+// }

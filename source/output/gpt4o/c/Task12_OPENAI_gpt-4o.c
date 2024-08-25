@@ -25,8 +25,8 @@ char* high(const char* inputString) {
     return bestWord;
 }
 
-int main() {
-    char inputString[] = "abad test example";
-    printf("%s\n", high(inputString));
-    return 0;
-}
+// int main() {
+//     char inputString[] = "abad test example";
+//     printf("%s\n", high(inputString));
+//     return 0;
+// }
