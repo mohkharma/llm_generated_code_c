@@ -17,9 +17,12 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #
 #find_package(httplib CONFIG REQUIRED)
 #find_package(bson-1.0 CONFIG REQUIRED)
+
+
 add_executable(llm_generated_code_c
-        tests/claude/Task19_Test.c
+        tests/gpt4o/Task21_Test.c
 )
+target_link_libraries(llm_generated_code_c m)
 #add_executable(llm_generated_code_c main.c
 #        source/output/OPENAI_gpt-4o/c/Task0_OPENAI_gpt-4o.c
 #        source/output/OPENAI_gpt-4o/c/Task1_OPENAI_gpt-4o.c

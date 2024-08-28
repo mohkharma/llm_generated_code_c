@@ -9,9 +9,9 @@ long findNb(long m) {
     }
     return totalVolume == m ? n : -1;
 }
-
-int main() {
-    printf("%ld\n", findNb(1071225));  // 45
-    printf("%ld\n", findNb(91716553919377));  // -1
-    return 0;
-}
+//
+// int main() {
+//     printf("%ld\n", findNb(1071225));  // 45
+//     printf("%ld\n", findNb(91716553919377));  // -1
+//     return 0;
+// }
