@@ -20,7 +20,7 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 
 
 add_executable(llm_generated_code_c
-        tests/gpt4o/Task21_Test.c
+        tests/llama-3/Task29_Test.c
 )
 target_link_libraries(llm_generated_code_c m)
 #add_executable(llm_generated_code_c main.c

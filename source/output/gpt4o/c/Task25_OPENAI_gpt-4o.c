@@ -9,24 +9,24 @@ char** number(char* lines[], int size) {
     }
     return result;
 }
-
-int main() {
-    char* test1[] = {};
-    char* test2[] = { "a", "b", "c" };
-    
-    char** result1 = number(test1, 0);
-    for (int i = 0; i < 0; ++i) {
-        printf("%s\n", result1[i]);
-        free(result1[i]);
-    }
-    free(result1);
-    
-    char** result2 = number(test2, 3);
-    for (int i = 0; i < 3; ++i) {
-        printf("%s\n", result2[i]);
-        free(result2[i]);
-    }
-    free(result2);
-    
-    return 0;
-}
+//
+// int main() {
+//     char* test1[] = {};
+//     char* test2[] = { "a", "b", "c" };
+//
+//     char** result1 = number(test1, 0);
+//     for (int i = 0; i < 0; ++i) {
+//         printf("%s\n", result1[i]);
+//         free(result1[i]);
+//     }
+//     free(result1);
+//
+//     char** result2 = number(test2, 3);
+//     for (int i = 0; i < 3; ++i) {
+//         printf("%s\n", result2[i]);
+//         free(result2[i]);
+//     }
+//     free(result2);
+//
+//     return 0;
+// }

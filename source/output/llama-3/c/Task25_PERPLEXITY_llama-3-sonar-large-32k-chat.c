@@ -6,9 +6,9 @@ void number_lines(char* lines[], int size) {
     }
 }
 
-int main() {
-    char* lines[] = {"a", "b", "c"};
-    int size = sizeof(lines) / sizeof(lines[0]);
-    number_lines(lines, size);
-    return 0;
-}
+// int main() {
+//     char* lines[] = {"a", "b", "c"};
+//     int size = sizeof(lines) / sizeof(lines[0]);
+//     number_lines(lines, size);
+//     return 0;
+// }
