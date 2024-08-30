@@ -20,7 +20,7 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 
 
 add_executable(llm_generated_code_c
-        tests/llama-3/Task29_Test.c
+        source/output/claude/c/Task30_CLAUDE_claude-3-5-sonnet-20240620.c
 )
 target_link_libraries(llm_generated_code_c m)
 #add_executable(llm_generated_code_c main.c
