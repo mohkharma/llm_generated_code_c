@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include "uthash.h"  // Include the uthash library
 
 #define MAX_LENGTH 2000
 

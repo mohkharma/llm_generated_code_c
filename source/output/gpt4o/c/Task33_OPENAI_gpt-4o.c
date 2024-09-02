@@ -28,15 +28,15 @@ int queueTime(int customers[], int length, int n) {
     }
     return max_time;
 }
-
-int main() {
-    int customers1[] = {5, 3, 4};
-    int customers2[] = {10, 2, 3, 3};
-    int customers3[] = {2, 3, 10};
-
-    printf("%d\n", queueTime(customers1, 3, 1)); // should return 12
-    printf("%d\n", queueTime(customers2, 4, 2)); // should return 10
-    printf("%d\n", queueTime(customers3, 3, 2)); // should return 12
-
-    return 0;
-}
+//
+// int main() {
+//     int customers1[] = {5, 3, 4};
+//     int customers2[] = {10, 2, 3, 3};
+//     int customers3[] = {2, 3, 10};
+//
+//     printf("%d\n", queueTime(customers1, 3, 1)); // should return 12
+//     printf("%d\n", queueTime(customers2, 4, 2)); // should return 10
+//     printf("%d\n", queueTime(customers3, 3, 2)); // should return 12
+//
+//     return 0;
+// }

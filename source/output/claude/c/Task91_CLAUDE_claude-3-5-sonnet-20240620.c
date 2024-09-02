@@ -25,15 +25,16 @@ struct dns_question {
     uint16_t qtype;
     uint16_t qclass;
 };
-
-void parse_dns_query(uint8_t* buffer, struct dns_header* header, struct dns_question* question) {
-    memcpy(header, buffer, sizeof(struct dns_header));
-    header->id = ntohs(header->id);
-    header->flags = ntohs(header->flags);
-    header->qdcount = ntohs(header->qdcount);
-    header->ancount = ntohs(header->ancount);
-    header->nscount = ntohs(header->nscount);
-    header->arcount = ntohs(header->arcount);
-
-    int offset = sizeof(struct dns_header);
-    int name_length', type='text')
+//incomplete function, code commented
+//error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before '\x7970653d'
+// void parse_dns_query(uint8_t* buffer, struct dns_header* header, struct dns_question* question) {
+//     memcpy(header, buffer, sizeof(struct dns_header));
+//     header->id = ntohs(header->id);
+//     header->flags = ntohs(header->flags);
+//     header->qdcount = ntohs(header->qdcount);
+//     header->ancount = ntohs(header->ancount);
+//     header->nscount = ntohs(header->nscount);
+//     header->arcount = ntohs(header->arcount);
+//
+//     int offset = sizeof(struct dns_header);
+//     int name_length', type='text')

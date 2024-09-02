@@ -20,18 +20,18 @@ void expandedForm(int num, char *output) {
     }
     strcpy(output, result);
 }
-
-int main() {
-    char output[200];
-    
-    expandedForm(12, output);
-    printf("%s\n", output); // Should return "10 + 2"
-    
-    expandedForm(42, output);
-    printf("%s\n", output); // Should return "40 + 2"
-    
-    expandedForm(70304, output);
-    printf("%s\n", output); // Should return "70000 + 300 + 4"
-    
-    return 0;
-}
+//
+// int main() {
+//     char output[200];
+//
+//     expandedForm(12, output);
+//     printf("%s\n", output); // Should return "10 + 2"
+//
+//     expandedForm(42, output);
+//     printf("%s\n", output); // Should return "40 + 2"
+//
+//     expandedForm(70304, output);
+//     printf("%s\n", output); // Should return "70000 + 300 + 4"
+//
+//     return 0;
+// }

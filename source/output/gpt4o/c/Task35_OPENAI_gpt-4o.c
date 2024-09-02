@@ -13,10 +13,10 @@ int numberOfPeople(Stop busStops[], int size) {
     }
     return totalPeople;
 }
-
-int main() {
-    Stop busStops[] = {{10, 0}, {3, 5}, {5, 8}};
-    int size = sizeof(busStops) / sizeof(busStops[0]);
-    printf("%d\n", numberOfPeople(busStops, size)); // Output: 5
-    return 0;
-}
+//
+// int main() {
+//     Stop busStops[] = {{10, 0}, {3, 5}, {5, 8}};
+//     int size = sizeof(busStops) / sizeof(busStops[0]);
+//     printf("%d\n", numberOfPeople(busStops, size)); // Output: 5
+//     return 0;
+// }

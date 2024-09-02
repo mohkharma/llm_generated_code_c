@@ -95,25 +95,26 @@ void *handle_client(void *arg) {
     return NULL;
 }
 
-Response authenticate(Credentials creds) {
-    Response response;
-    FILE *file = fopen("users.txt", "r");
-    if (file == NULL) {
-        strcpy(response.status, "failure");
-        strcpy(response.message, "Error opening users file");
-        return response;
-    }
+//incomlete code, code commented
+// Response authenticate(Credentials creds) {
+//     Response response;
+//     FILE *file = fopen("users.txt", "r");
+//     if (file == NULL) {
+//         strcpy(response.status, "failure");
+//         strcpy(response.message, "Error opening users file");
+//         return response;
+//     }
+//
+//     char line[100];
+//     while (fgets(line, sizeof(line), file)) {
+//         char username[50], password[50];
+//         sscanf(line, "%[^:]:%s", username, password);
+//         if (strcmp(username, creds.username) == 0 && strcmp(password, creds.password) == 0) {
+//             strcpy(response.status, "success");
+//             strcpy(response.message, "Login successful");
+//             fclose(file);
+//             return response;
+//         }
+//     }
 
-    char line[100];
-    while (fgets(line, sizeof(line), file)) {
-        char username[50], password[50];
-        sscanf(line, "%[^:]:%s", username, password);
-        if (strcmp(username, creds.username) == 0 && strcmp(password, creds.password) == 0) {
-            strcpy(response.status, "success");
-            strcpy(response.message, "Login successful");
-            fclose(file);
-            return response;
-        }
-    }
-
-    strcpy(response', type='text')
+    // strcpy(response', type='text')

@@ -12,20 +12,20 @@ void execute_xpath(const char* filename, const char* xpathExpr) {
 
     doc = xmlParseFile(filename);
     if (doc == NULL) {
-        fprintf(stderr, "Error: unable to parse file \\"%s\\"\\n", filename);
+        fprintf(stderr, "Error: unable to parse file \"%s\"\n", filename);
         return;
     }
 
     xpathCtx = xmlXPathNewContext(doc);
     if(xpathCtx == NULL) {
-        fprintf(stderr,"Error: unable to create new XPath context\\n");
+        fprintf(stderr,"Error: unable to create new XPath context\n");
         xmlFreeDoc(doc);
         return;
     }
 
     xpathObj = xmlXPathEvalExpression((xmlChar*)xpathExpr, xpathCtx);
     if(xpathObj == NULL) {
-        fprintf(stderr,"Error: unable to evaluate xpath expression \\"%s\\"\\n", xpathExpr);
+        fprintf(stderr,"Error: unable to evaluate xpath expression \"%s\"\n", xpathExpr);
         xmlXPathFreeContext(xpathCtx);
         xmlFreeDoc(doc);
         return;
@@ -37,7 +37,7 @@ void execute_xpath(const char* filename, const char* xpathExpr) {
             xmlNodePtr cur = nodes->nodeTab[i];
             if (cur->type == XML_ELEMENT_NODE) {
                 xmlChar* content = xmlNodeGetContent(cur);
-                printf("%s\\n", content);
+                printf("%s\n", content);
                 xmlFree(content);
             }
         }
@@ -51,7 +51,7 @@ void execute_xpath(const char* filename, const char* xpathExpr) {
 
 int main(int argc, char **argv) {
     if (argc != 3) {
-        fprintf(stderr, "Usage: %s <xml_file> <xpath>\\n", argv[0]);
+        fprintf(stderr, "Usage: %s <xml_file> <xpath>\n", argv[0]);
         return 1;
     }
 

@@ -15,12 +15,12 @@ int main() {
     struct sockaddr_in address;
     int addrlen = sizeof(address);
     char buffer[BUFFER_SIZE] = {0};
-    char *response = "HTTP/1.1 200 OK\\r\\n"
-                     "Access-Control-Allow-Origin: *\\r\\n"
-                     "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS\\r\\n"
-                     "Access-Control-Allow-Headers: Content-Type\\r\\n"
-                     "Content-Type: application/json\\r\\n\\r\\n"
-                     "{\\"message\\": \\"This is CORS-enabled data\\"}";
+    char *response = "HTTP/1.1 200 OK\r\n"
+                     "Access-Control-Allow-Origin: *\r\n"
+                     "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS\r\n"
+                     "Access-Control-Allow-Headers: Content-Type\r\n"
+                     "Content-Type: application/json\r\n\r\n"
+                     "{\"message\": \"This is CORS-enabled data\"}";
 
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         perror("socket failed");
@@ -42,14 +42,14 @@ int main() {
     }
 
     while(1) {
-        printf("Waiting for a connection...\\n");
+        printf("Waiting for a connection...\n");
         if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) {
             perror("accept");
             exit(EXIT_FAILURE);
         }
 
         read(new_socket, buffer, BUFFER_SIZE);
-        printf("%s\\n", buffer);
+        printf("%s\n", buffer);
         write(new_socket, response, strlen(response));
         close(new_socket);
     }

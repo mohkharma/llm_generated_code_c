@@ -21,7 +21,7 @@ bool isValidAdminPassword(const char* password) {
         if (isupper(password[i])) hasUppercase = true;
         if (islower(password[i])) hasLowercase = true;
         if (isdigit(password[i])) hasDigit = true;
-        if (strchr("!@#$%^&*(),.?\\":{}|<>", password[i])) hasSpecialChar = true;
+        if (strchr("!@#$%^&*(),.?\":{}|<>", password[i])) hasSpecialChar = true;
     }
 
     if (!hasUppercase || !hasLowercase || !hasDigit || !hasSpecialChar) {
@@ -45,12 +45,12 @@ int main() {
     char password[MAX_PASSWORD_LENGTH];
     printf("Enter the admin password: ");
     fgets(password, sizeof(password), stdin);
-    password[strcspn(password, "\\n")] = 0; // Remove newline
+    password[strcspn(password, "\n")] = 0; // Remove newline
 
     if (isValidAdminPassword(password)) {
-        printf("Password is valid\\n");
+        printf("Password is valid\n");
     } else {
-        printf("Password is invalid\\n");
+        printf("Password is invalid\n");
     }
 
     return 0;

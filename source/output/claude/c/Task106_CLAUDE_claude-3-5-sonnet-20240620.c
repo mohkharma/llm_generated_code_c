@@ -58,9 +58,11 @@ int* encrypt(int e, int n, char* plaintext) {
 char* decrypt(int d, int n, int* ciphertext, int len) {
     char* plain = malloc((len + 1) * sizeof(char));
     for (int i = 0; i < len; i++) {
-        plain[i] = (char)(pow(ciphertext[i], d) % n);
+        //error: invalid operands to binary % (have ‘double’ and ‘int’)
+        // plain[i] = (char)(pow(ciphertext[i], d) % n);
+        plain[i] = (char)((int)pow(ciphertext[i], d) % n);
     }
-    plain[len] = '\\0';
+    plain[len] = '\0';
     return plain;
 }
 
@@ -75,7 +77,7 @@ int main() {
     char message[1000];
     printf("Enter a message to encrypt: ");
     fgets(message, sizeof(message), stdin);
-    message[strcspn(message, "\\n")] = 0;
+    message[strcspn(message, "\n")] = 0;
     
     int len = strlen(message);
     int* encrypted_msg = encrypt(e, n, message);
@@ -84,10 +86,10 @@ int main() {
     for (int i = 0; i < len; i++) {
         printf("%d ", encrypted_msg[i]);
     }
-    printf("\\n");
+    printf("\n");
     
     char* decrypted_msg = decrypt(d, n, encrypted_msg, len);
-    printf("Decrypted message: %s\\n", decrypted_msg);
+    printf("Decrypted message: %s\n", decrypted_msg);
     
     free(encrypted_msg);
     free(decrypted_msg);

@@ -19,7 +19,9 @@ void create_directory(const char* path) {
 
 void extract_zip(const char* zip_path, const char* extract_path) {
     int err = 0;
-    zip* z = zip_open(zip_path, 0, &err);
+    // error: unknown type name ‘zip’; use ‘struct’ keyword to refer to the type
+     // zip* z = zip_open(zip_path, 0, &err);
+    struct zip* z = zip_open(zip_path, 0, &err);
     if (z == NULL) {
         fprintf(stderr, "Failed to open ZIP file: %s\\n", zip_path);
         return;
@@ -34,7 +36,9 @@ void extract_zip(const char* zip_path, const char* extract_path) {
             if (zs.name[strlen(zs.name) - 1] == '/') {
                 create_directory(full_path);
             } else {
-                zip_file* zf = zip_fopen_index(z, i, 0);
+                //error: unknown type name ‘zip_file’; use ‘struct’ keyword to refer to the type
+                // zip_file* zf = zip_fopen_index(z, i, 0);
+                struct zip_file* zf = zip_fopen_index(z, i, 0);
                 if (zf) {
                     FILE* outfile = fopen(full_path, "wb");
                     if (outfile) {

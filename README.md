@@ -5,6 +5,17 @@ Change the following:
     output_directory = "./out"  # Replace with the path to your output directory
 
 Then Run:
+
 ```
 python compiler.py
 ```
+
+
+```
+build-wrapper-linux-x86-64 --out-dir bw-output cmake --build cmake-build-debug
+cd bw-output
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+cd ..
+sonar-scanner
+```
+

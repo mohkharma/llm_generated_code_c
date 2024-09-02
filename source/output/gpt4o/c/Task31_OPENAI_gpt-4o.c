@@ -21,17 +21,17 @@ void dnaStrand(const char* dna, char* complement) {
     }
     complement[i] = '\0';
 }
-
-int main() {
-    char dna1[] = "ATTGC";
-    char dna2[] = "GTAT";
-    char complement1[6], complement2[5];
-
-    dnaStrand(dna1, complement1);
-    dnaStrand(dna2, complement2);
-
-    printf("%s\n", complement1);  // Output: TAACG
-    printf("%s\n", complement2);  // Output: CATA
-
-    return 0;
-}
+//
+// int main() {
+//     char dna1[] = "ATTGC";
+//     char dna2[] = "GTAT";
+//     char complement1[6], complement2[5];
+//
+//     dnaStrand(dna1, complement1);
+//     dnaStrand(dna2, complement2);
+//
+//     printf("%s\n", complement1);  // Output: TAACG
+//     printf("%s\n", complement2);  // Output: CATA
+//
+//     return 0;
+// }

@@ -3,10 +3,10 @@
 // You should not implement it, or speculate about its implementation
 struct MountainArray;
 int get(struct MountainArray *, int index);
-int length(struct MountainArray *);
+int length1(struct MountainArray *);
 
 int findInMountainArray(int target, struct MountainArray* mountainArr) {
-    int length = length(mountainArr);
+    int length = length1(mountainArr);
     
     // Find peak element
     int left = 0, right = length - 1;
